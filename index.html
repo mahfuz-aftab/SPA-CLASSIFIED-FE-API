@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html lang="en" ng-app="singlePageApp">
+
+<head>
+  <base href="/" />
+  <title>SPA Classified</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon-terminal.ico" type="image/gif" sizes="16x16">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous"/>
+
+  <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
+
+</head>
+
+<!-- define angular controller -->
+<body>
+  <div ng-include="'templates/header.html'"></div>
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+  <footer ng-include="'templates/footer.html'"></footer>
+</body>
+
+  <script  type="text/javascript" src="js/appConfig.js"></script>
+  <script  type="text/javascript" src="js/homeController.js"></script>
+  <script  type="text/javascript" src="js/aboutController.js"></script>
+  <script  type="text/javascript" src="js/contactController.js"></script>
+</html>

@@ -1,0 +1,25 @@
+<div class="jumbotron text-center">
+	<h1>Home Page</h1>
+	
+	<p>{{ message }}</p>
+
+	<button type = "button" class="btn btn-default btn-lg" ng-click="getData()">Hit GET API</button>
+
+	<div class= "container">
+		<hr></hr>
+	<table class="table table-bordered" ng-repeat="post in posts">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
