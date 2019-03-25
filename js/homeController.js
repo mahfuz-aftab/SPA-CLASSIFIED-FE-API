@@ -1,12 +1,11 @@
 singlePageApp.controller('homeCtrl', function($scope, $http, $location) {
-  
+
   $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
-	    $scope.message = 'Home page!';
-	    console.log("Home");
+  $scope.message = 'Home page!';
+  console.log("Home");
 
-
-	    $scope.postData = function(obj) {
+  $scope.postData = function(obj) {
 
     $http({
       method: "POST",
@@ -21,18 +20,17 @@ singlePageApp.controller('homeCtrl', function($scope, $http, $location) {
   };
 
   $scope.getData = function() {
-  	$scope.posts = [];
+    $scope.posts = [];
     console.log("Hello");
     $http({
       method: "GET",
       url: "https://jsonplaceholder.typicode.com/posts",
       //data: data
     }).then(function mySuccess(response) {
-    	$scope.posts = response.data;
+      $scope.posts = response.data;
       console.log("success: ", response.data);
     }, function myError(response) {
       console.log("error: ", response.statusText);
     });
   };
-
-	});
+});

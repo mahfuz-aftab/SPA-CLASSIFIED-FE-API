@@ -3,30 +3,30 @@
 	// configure our routes
 	singlePageApp.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 
-		$locationProvider.html5Mode(true);
-    	$locationProvider.hashPrefix = '!';
-		
-  		$routeProvider
+	  $locationProvider.html5Mode(true);
+	  $locationProvider.hashPrefix = '!';
 
-	        // route for the home page
-	        .when('/', {
-	            templateUrl: 'templates/home.html',
-	            controller: 'homeCtrl'
-	        })
+	  $routeProvider
 
-	        // route for the about page
-	        .when('/about', {
-	            templateUrl: 'templates/about.html',
-	            controller: 'aboutCtrl'
-	        })
+	    // route for the home page
+	    .when('/', {
+	      templateUrl: 'templates/home.html',
+	      controller: 'homeCtrl'
+	    })
 
-	        // route for the contact page
-	        .when('/contact', {
-	            templateUrl: 'templates/contact.html',
-	            controller: 'contactCtrl'
-	        })
+	    // route for the about page
+	    .when('/about', {
+	      templateUrl: 'templates/about.html',
+	      controller: 'aboutCtrl'
+	    })
 
-	        .otherwise({
-      			redirectTo: '/'
-    		});
-		}]);
+	    // route for the contact page
+	    .when('/contact', {
+	      templateUrl: 'templates/contact.html',
+	      controller: 'contactCtrl'
+	    })
+
+	    .otherwise({
+	      redirectTo: '/'
+	    });
+	}]);
