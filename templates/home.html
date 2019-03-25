@@ -6,14 +6,24 @@
 	<div class="container">
 		<hr>
 		</hr>
-		<table class="table table-bordered" ng-repeat="post in posts">
+	<!-- <select  class="form-control" ng-options="id as opt.id for (id, opt) in posts track by $index" ng-model="post"> -->
+ 			<select  class="form-control" ng-options="opt.id for opt in posts track by $index" ng-model="post">
+ 			</select>
+
+ 			<!-- <select class="form-control" ng-model="post" ng-change="">
+				<option ng-repeat="opt in posts track by $index" value="{{opt.id}}"> 
+					{{opt.id}}-{{opt.title}} > ({{opt.id==3?'T':'F'}})
+				</option>
+			</select> -->
+
+		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th>User ID</th>
-					<th>Title</th>
+					<th class = "text-center">User ID</th>
+					<th class = "text-center">Title</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody ng-repeat="post in posts">
 				<tr>
 					<td>{{post.id}}</td>
 					<td>{{post.title}}</td>
